@@ -37,7 +37,20 @@ This is a quick reference for Python language with only examples and some commen
 
 ## Boolean
 
+---
 ## Character
+```Python
+a = 'a'
+ord(a) # ascii code of 'a'
+
+b = 105
+chr(b) # character of ascii code for b
+```
+**Note:**
+1. String with one element is a character.
+2. ord and chr methods only work for character.
+
+---
 
 ## String
 ```python
@@ -69,10 +82,34 @@ a = a + ' people'
 1. String is not an **array**. Although it works like an array. Python does not have **array**.
 1. ToString function in python is **\_\_str\_\_**. 
 1. The index can't exceed the range of the string (0 to len(str)) when you access one element, but it would be fine if you are accessing a slide of the string.
+---
 
 ## **Array**
+**Note:**
+1. Seems Python does not have a built-in array. It uses array module to achieve array.
+---
 
 ## **List**
+```python
+# Create an empty list
+a = list()
+
+# List is a object
+a = [1,2,3,4]
+b = a
+a[1] = 100
+# a and b will both change to [1,100,3,4] since list is an object.
+
+# Copy a list
+c = list(a) # This will create a new list object which has the same content as a
+c.append(200)
+# This change won't affect a and b, since they are different list object.
+
+```
+**Note:**
+1. **LIST IS A NON-PRIMITIVE DATA TYPE!!!** List is a object, so the change to the reference pointing to a list will also affect other references pointing to the same list.
+2. Although **string** works like a list(or array), but a string is **immutable**, while list is **mutable**. 
+---
 
 ## **Tuple**
 ```python
@@ -88,8 +125,6 @@ a = a + ' people'
     t[0] = 8888 # This is invalid
 
     v = ([1,2,3,4],[4,3,2,1])
-    
-
 ```
 
 
@@ -119,9 +154,9 @@ if x < 0:
 ```
 **Note:** 
 * **if...elif...else** sequence can be used as a substitute of **switch case** statement. 
-
+---
 ## **while**
-
+---
 ## **for**
 ```python
 for n in range(2, 10):
@@ -136,6 +171,7 @@ for n in range(2, 10):
 **Note:**
 * **range()** function can be replaced by a iterable item, such as a list.
 * Use **pass** if there is no statement in your loop structure, same to **if** statement.
+---
 
 ## **switch**
 
@@ -150,6 +186,9 @@ for n in range(2, 10):
 ## **Example Code**
 
 
+**Note:**
+1. Python pass primitive data by value, non-primitive data by reference.
+
 # Class
 <a name= "#class"></a>
 
@@ -160,6 +199,12 @@ for n in range(2, 10):
 ## **Field methods**
 
 ## **Override methods**
+
+### \_\_eq\_\_
+**Note:**
+1. This method will override the "==" operation
+2. When calling **a==b**, it will call the \_\_eq\_\_ method from a, instead of from both of them.
+
 
 ## **Inheritance**
 
@@ -184,3 +229,8 @@ for n in range(2, 10):
 
 # Arithematic calculation
 <a name= "#arithematic-calculation"></a>
+
+```Mermaid
+graph LR;
+A(Input value 1) -- w1 --> B(neuron);
+```

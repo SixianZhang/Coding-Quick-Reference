@@ -64,7 +64,29 @@
 ## **switch**
 
 ## **try...catch**
+```MATLAB
+% Catch error and display a warning
+try
+    a = notaFunction(5,6);
+catch
+    warning('Problem using function.  Assigning a value of 0.');
+    a = 0;
+end
 
+% Catch error and add discription
+try
+   C = [A; B];
+catch ME
+   if (strcmp(ME.identifier,'MATLAB:catenate:dimensionMismatch'))
+      msg = ['Dimension mismatch occurred: First argument has ', ...
+            num2str(size(A,2)),' columns while second has ', ...
+            num2str(size(B,2)),' columns.'];
+        causeException = MException('MATLAB:myCode:dimensions',msg);
+        ME = addCause(ME,causeException);
+   end
+   rethrow(ME)
+end 
+```
 
 
 
