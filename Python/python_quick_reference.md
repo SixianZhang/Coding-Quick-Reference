@@ -88,7 +88,7 @@ a = a + ' people'
 **Note:**
 1. Seems Python does not have a built-in array. It uses array module to achieve array.
 ---
-
+ 
 ## **List**
 ```python
 # Create an empty list
