@@ -229,8 +229,3 @@ for n in range(2, 10):
 
 # Arithematic calculation
 <a name= "#arithematic-calculation"></a>
-
-```Mermaid
-graph LR;
-A(Input value 1) -- w1 --> B(neuron);
-```
