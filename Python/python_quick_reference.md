@@ -219,6 +219,37 @@ for n in range(2, 10):
 # Error and exception
 <a name= "#error-and-exception"></a>
 
+# Test
+<a name = '#test'></a>
+```python
+import unittest
+import ClassToBeTest
+
+class ClassTest(unitest.TestCase):
+    def setup(self):
+    # This method run before the tests
+        pass
+
+    def taerdown(self):
+    # This method run between the tests
+        pass
+    
+    # Below are the test methods
+    def test1(self):
+        self.assertEqual(a,b) # assert equals.
+    
+    def test2(self):
+
+if __name__ = '__main__':
+    unittest.main(verbosity = 2)
+```
+**Note:** 
+1. Find more at https://docs.python.org/3/library/unittest.html#assert-methods
+1. **Verbosity** argument control the information showed in the result.
+1. The test will run in an alphabet order.
+
+
+
 
 # Coding style
 <a name= "#coding-style"></a>
@@ -229,8 +260,3 @@ for n in range(2, 10):
 
 # Arithematic calculation
 <a name= "#arithematic-calculation"></a>
-
-```Mermaid
-graph LR;
-A(Input value 1) -- w1 --> B(neuron);
-```
