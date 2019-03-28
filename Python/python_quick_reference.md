@@ -230,7 +230,7 @@ class ClassTest(unitest.TestCase):
     # This method run before the tests
         pass
 
-    def taerdown(self):
+    def teardown(self):
     # This method run between the tests
         pass
     
