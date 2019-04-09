@@ -107,7 +107,7 @@ c.append(200)
 
 ```
 **Note:**
-1. **LIST IS A NON-PRIMITIVE DATA TYPE!!!** List is a object, so the change to the reference pointing to a list will also affect other references pointing to the same list.
+1. **LIST IS A NON-PRIMITIVE DATA TYPE!!!** List is an object, so the change to the reference pointing to a list will also affect other references pointing to the same list.
 2. Although **string** works like a list(or array), but a string is **immutable**, while list is **mutable**. 
 ---
 
@@ -228,14 +228,15 @@ import ClassToBeTest
 class ClassTest(unitest.TestCase):
     def setup(self):
     # This method run before the tests
-        pass
+        self._classtobetest = ClassToBeTest()
 
     def teardown(self):
     # This method run between the tests
-        pass
+        self._classtobetest = ClassToBeTest()
     
     # Below are the test methods
     def test1(self):
+        self._classtobetest.callsomemthods()
         self.assertEqual(a,b) # assert equals.
     
     def test2(self):
@@ -244,7 +245,8 @@ if __name__ = '__main__':
     unittest.main(verbosity = 2)
 ```
 **Note:** 
-1. Find more at https://docs.python.org/3/library/unittest.html#assert-methods
+1. The test methods have to start with 'test'. It is a name convention.
+1. Find more assertions at https://docs.python.org/3/library/unittest.html#assert-methods
 1. **Verbosity** argument control the information showed in the result.
 1. The test will run in an alphabet order.
 
@@ -253,7 +255,6 @@ if __name__ = '__main__':
 
 # Coding style
 <a name= "#coding-style"></a>
-
 
 # Libraries
 <a name= "#libraries"></a>
