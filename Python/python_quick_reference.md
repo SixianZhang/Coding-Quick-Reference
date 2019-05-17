@@ -105,6 +105,10 @@ c = list(a) # This will create a new list object which has the same content as a
 c.append(200)
 # This change won't affect a and b, since they are different list object.
 
+# Swap
+a[1], a[2] = a[2], a[1]
+
+
 ```
 **Note:**
 1. **LIST IS A NON-PRIMITIVE DATA TYPE!!!** List is an object, so the change to the reference pointing to a list will also affect other references pointing to the same list.
@@ -241,7 +245,7 @@ class ClassTest(unitest.TestCase):
     
     def test2(self):
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     unittest.main(verbosity = 2)
 ```
 **Note:** 
